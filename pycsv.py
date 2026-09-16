@@ -11,5 +11,7 @@ products = pd.read_csv("products.csv")
 #print(f'---LAST 5 ORDERS---\n {orders.tail(5)}')
 
 #orders.info()
-print(orders[["category", "city"]].describe())
+#print(orders[["category", "city"]].describe())
+print(f'{orders[["city", "order_date"]].head(5)}')
+print(f'---Specific rows and columns---\n{orders[orders["price"] > 5000].head(3)}')
 
